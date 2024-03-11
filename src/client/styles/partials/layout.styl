@@ -1,0 +1,41 @@
+.wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.main {
+	overflow-x: hidden;
+	max-height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	verticalStretch();
+}
+
+.container {
+	grid-container();
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-overflow {
+	overflow: hidden;
+}
+
+
+[data-elements="dropdown"] {
+	[data-elements="dropdownContent"] {
+		display: none;
+	}
+
+	&.is-open {
+		[data-elements="dropdownContent"] {
+			display: block;
+		}
+	}
+}

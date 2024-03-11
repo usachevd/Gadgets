@@ -1,0 +1,36 @@
+//grid
+
+$grid-gap = 5px;
+
+grid-container() {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+	/*max-width: 1440px;*/
+	max-width: 1680px;
+
+	@media $small {
+		padding: 0 16px;
+	}
+}
+
+grid-rows() {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -($grid-gap);
+	margin-right: -($grid-gap);
+}
+
+grid-col(x = 12, y = 12){
+	width: (x/y)*100%;
+	padding-left: $grid-gap;
+	padding-right: $grid-gap;
+}
+
+grid-offset-left(x = 0, y = 12){
+	margin-left: (x/y)*100%;
+}
+
+grid-offset-right(x = 0, y = 12){
+	margin-right: (x/y)*100%;
+}

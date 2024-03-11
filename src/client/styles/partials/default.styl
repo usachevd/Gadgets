@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none !important;
+}
+
+canvas {
+	display: block;
+}
+
+html {}
+
+html,
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overscroll-behavior-y: contain;
+}
+
+body {
+	font-family: $font;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+	font-weight: 400;
+	color: $c1;
+	background-color: $c0;
+	min-height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	text-rendering: optimizeLegibility; 
+	-webkit-font-smoothing: antialiased;
+	-ms-overflow-style: none;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+
+	&.is-overflow {
+		overflow: hidden;
+	}
+}
+
+section {
+	min-height: 100vh;
+	scroll-snap-align: start;
+}
+
+ul,ol {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+dl, dt, dd {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $font;
+	font-weight: 400;
+	letter-spacing: -0.03em;
+	margin: 0;
+}
+
+h1, h2 {
+	font-size: 50px;
+	line-height: 1.04;
+}
+
+h3 {
+	font-size: 35px;
+	line-height: 1.06;
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 1.14;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+	padding: 0;
+}
+
+button,
+input,
+textarea {
+	font-family: $font;
+	font-weight: 400;
+	color: $c0;
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	color: $c0;
+
+	&:focus {
+
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+svg {
+	fill: currentColor;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+address {
+	font-style: normal;
+}
+
+@media $small {
+	h1, h2 {
+		font-size: 35px;
+		line-height: 1.06;
+	}
+
+	h3 {
+		
+	}
+}
